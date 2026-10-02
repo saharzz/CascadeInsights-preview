@@ -567,14 +567,15 @@ h1, h2, h3 { font-weight: 300; line-height: 1.15; letter-spacing: -0.01em; }
 /* Page title when it sits in the narrow left column */
 .split > .page-title { font-size: clamp(2rem, 3.6vw, 2.8rem); max-width: none; margin-bottom: 1.4rem; }
 
-/* Wide screens: widen the reading column and enlarge body text so it fills more of the page */
+/* Full-width text: all text sections use the full 1200px content frame */
+.split, .lead, .subnav ul, .split-main, .prose, .list, .mission,
+.page-title, .cta-band p, .principles { max-width: none; }
+
 @media (min-width: 1100px) {
-  .split, .lead, .subnav ul { max-width: 900px; }
   .lead { font-size: 1.9rem; }
   .split-main, .split > p:not(.mission), .split .principles p, .fit { font-size: 1.2rem; line-height: 1.75; }
   .split > .page-title { font-size: 2.9rem; }
-  .mission { font-size: 1.85rem; max-width: none; }
-  .principles { gap: 2.4rem 3rem; }
+  .mission { font-size: 1.85rem; }
   .principle h3 { font-size: 1.35rem; }
   .form-frame { height: 1300px; }
 }
